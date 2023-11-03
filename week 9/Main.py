@@ -51,6 +51,12 @@ new_test_file = Path("./new_folder/test.txt")
 new_test_file.touch() # creates a new file
 
 
+
+new_file.write_text("Testing 123") # writes text to a file
+
+contents = new_file.read_text() # reads text from a file
+print(contents, type(contents))
+
 current_dir = Path.cwd() # returns the current directory
 
 for f in current_dir.iterdir():
@@ -62,11 +68,6 @@ for f in current_dir.iterdir():
 for index, f in enumerate(current_dir.iterdir()):
     print(f"{index + 1}. {f}")
 
-# simple version of reading/writing files
-new_test_file.write_text("Hello World!")
-
-contents = new_file.read_text()
-print(contents, type(contents))
 
 # more complex version of reading/writing files
 with new_test_file.open(mode="w") as file:
@@ -79,6 +80,61 @@ with new_test_file.open(mode="w") as file:
 'x' = Create mode
 """
 
-file_handle = open(./text.txt, "a")
+file_handle = open("./text.txt", "a")
 file_handle.write("Hello World!")
 file_handle.close()
+
+# note! any time you open() you have to close()
+# file_handle = open("./text.txt", "a") # this will result in an error
+# file_handle.write("Hello World!") # this will result in an error
+# file_handle.close() # this will result in an error
+
+#some operations can result in a FileNotFound Error
+
+with open("./text.txt", 'a') as f:
+    contents = f.read()
+    print(contents)
+
+with open("./text.txt", 'r') as f:
+    print(f.read())
+
+"""
+JSON - JavaScript Object Notation
+
+
+A text format for storing objects or lists of objects
+Used as an alternative to XML
+"""
+
+"""
+{
+    "name": "Charlie",
+    "age": 12,
+}
+"""
+
+"""
+four methods for writing/reading JSON to/from files
+
+json.dump() - write a dictionary to a file 
+json.load() - read from a file in to a dictionary
+
+json.dumps() - write to a string
+json.loads() - read from a string
+"""
+import json
+
+transcript = {
+    "firstname": "Chris",
+    "lastname": "Harris",
+    "grades":[
+        {"ACIT 1515": "100"},
+        {"ACIT 1630": "65"},
+    ]
+}
+
+with open('./transcript.json', 'w') as f:
+    json.dump(transcript, f)
+
+with open('./transcript.json', 'r') as f:
+    transcript = json.load(f)
