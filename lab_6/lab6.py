@@ -80,7 +80,7 @@ def main():
     print((transcript))
 
     # 12. Write the updated variable to a new file using open(), ./assignment2/transcripts/Chris-Harris-Updated.json
-    with open("lab_6/assignment2/transcripts/Chris-Harris.json", 'w') as f:
+    with open("lab_6/assignment2/transcripts/Chris-Harris-updated.json", 'w') as f:
         json.dump(transcript, f)
 
 if __name__ == '__main__':
