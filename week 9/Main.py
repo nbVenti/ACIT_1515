@@ -1,3 +1,9 @@
+"""
+This code demonstrates the usage of dictionaries and pathlib module in Python.
+It creates an empty dictionary and a dictionary with some key-value pairs.
+It also shows how to modify the values of a dictionary and iterate over its keys and values.
+Additionally, it creates a file and a folder using the pathlib module and prints the contents of the current directory.
+"""
 empty_set = {}
 
 dog ={
@@ -45,3 +51,34 @@ new_test_file = Path("./new_folder/test.txt")
 new_test_file.touch() # creates a new file
 
 
+current_dir = Path.cwd() # returns the current directory
+
+for f in current_dir.iterdir():
+    print(f, f.is_dir())
+    # check if f is a file or a folder f is
+    # is_dir() - returns True if f is a folder
+    # is_file() - returns True if f is a file
+
+for index, f in enumerate(current_dir.iterdir()):
+    print(f"{index + 1}. {f}")
+
+# simple version of reading/writing files
+new_test_file.write_text("Hello World!")
+
+contents = new_file.read_text()
+print(contents, type(contents))
+
+# more complex version of reading/writing files
+with new_test_file.open(mode="w") as file:
+    file.write("Hello World!")
+
+"""
+'w' = Write mode
+'r' = Read mode
+'a' = Append mode
+'x' = Create mode
+"""
+
+file_handle = open(./text.txt, "a")
+file_handle.write("Hello World!")
+file_handle.close()
