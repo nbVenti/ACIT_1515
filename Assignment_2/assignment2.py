@@ -207,17 +207,29 @@ def change_grade():
 def prompt(choices, valid_values):
     choice = input(">> ")
     print(choice)
+    print(valid_values)
    
     if choice == "q":
         sys.exit()
 
     elif choice not in valid_values:
         print("Invalid choice\n")
-        prompt(choices, valid_values)
+        return prompt(choices, valid_values)
+
     else:
-        print(choices[int(choice) - 1])
-        choices[int(choice) - 1]
-        return choices[int(choice) - 1]
+        if type(choice) == str:
+            choice = int(choice)
+            return choices[choice - 1]
+        return choices[(choice) - 1]
+    try:
+        choice = int(choice, 10)
+        return choices[choice - 1]['target']
+    except ValueError:
+        print(choice)
+        print("Invalid choice\n")
+        return prompt(choices, valid_values)
+    print(choices[(int(choice)) - 1],"Print return statment, past if statement")
+    return choices[(int(choice)) - 1]
     
      
 
@@ -247,8 +259,8 @@ def main():
         for index, choice in enumerate(choices):
             print(f" {index + 1}. {choice['name']}")
 
-        userInput = prompt(choices, ["1", "2", "3"])
-        print(userInput)
+        choice = prompt(choices, ["1", "2", "3"])
+        print(choice)
         choice["target"]()
 
 if __name__ == '__main__':
