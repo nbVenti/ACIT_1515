@@ -22,14 +22,12 @@ Notes on implementation are located below inside the functions
 from pathlib import Path
 import json
 import sys
-import os
 
 def load_transcripts():
     """
     load_transcripts() is a helper function (that will be called by load_transcript, print_grades, and change_grade). It must:
 
     1. Create an empty list to hold the transcripts ('transcripts' are JSON objects that will be read from files)
-    
 
     2. Use Path to open the ./transcripts folder
     
@@ -40,23 +38,11 @@ def load_transcripts():
     4. If your list from step 1 is not empty, return it, otherwise return None
 
     """
-    transcripts = {}
-    if not (Path("Assignment_2/transcripts").exists()):
-        sys.exit()
-
-    for i in os.listdir("Assignment_2/transcripts"):
-        if i.endswith(".json"):
-            with open(f"Assignment_2/transcripts/{i}", 'r') as f:
-                transcripts[i] = json.load(f) 
-              
-    
-    if transcripts != None:
-        return transcripts
+    pass # remove this line
 
 def load_transcript():
     """
     load_transcript() is responsible for finding and returning a single transcript. It must:
-
 
     1. Call load_transcripts() and store the returned list in a variable
 
@@ -66,29 +52,13 @@ def load_transcript():
         and print each transcript in the format:
         1. firstname lastname (where firstname and lastname are the actual names from the JSON object)
         2. firstname lastname
-`
+
     4. Call the prompt() function, passing the list and the valid values ["1", "2", "3", "4"]
 
     5. From the transcript returned by prompt(), print the firstname and lastname, followed by grades for each course
 
     """
-    transcript = load_transcripts()
-    if transcript == None:
-        sys.exit()
-    print("Please choose one of the following transcripts:")
-    for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
-    Names = ["Ayesha", "Chris","Jeremy", "Tim"]
-
-    x = prompt(Names, ["1", "2", "3", "4"])
-    
-    for i in transcript:
-        if transcript[i]["firstname"] == x:
-            return (transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
-
-    
-
+    pass # remove this line
 
 def print_grades():
     """
@@ -110,16 +80,7 @@ def print_grades():
         etc.
 
     """
-
-    grades = load_transcripts()
-    if grades == None:
-        sys.exit()
-    for i in grades:
-        print(grades[i]["firstname"],grades[i]["lastname"])
-        for u in range(3):
-            print(grades[i]["grades"][u]['course'], grades[i]["grades"][u]['grade'])
-        print()    
-    
+    pass # remove this line
 
 def change_grade():
     """
@@ -151,75 +112,19 @@ def change_grade():
     9. Open the file associated with the chosen transcript and dump the updated dictionary to the file, overwriting the previous data
 
     """
-    transcript = load_transcripts()
-    if transcript == None:
-        sys.exit()
-    print("Whos transcript would you like to change?:")
-    for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
-    Names = ["Ayesha", "Chris","Jeremy", "Tim"]
-
-    x = prompt(Names, ["1", "2", "3", "4"])
-    u = 0
-
-    for i in transcript:
-        if transcript[i]["firstname"] == x:
-            print(transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
-            u = transcript[i]
-
-    print("Which grade would you like to change?:")
-    y = prompt(u["grades"], ["1","2","3"])
-    
-    monkey = input("Please enter new grade:")
-    # y = transcript[i]["grades"][user-input]
-    ### enter validaion here
-    y['grade'] = monkey
-    """    
-    
-    """
-    # for i in transcript:
-    #     if transcript[i]["firstname"] == x:
-    #         for j in range(len(transcript[i]["grades"])):
-    #             if transcript[i]["grades"][j]['course'] == y['course']:        
-    #                 print(transcript[i]["grades"][j])
-    #                 y["grades"] = monkey
-    #                 print(transcript[i]["grades"][j])
-    #                 break
-            
-            # print(transcript[i]["grades"](y["grade"]))
-
-    for i in os.listdir("Assignment_2/transcripts"):
-        if i.__contains__(x):
-            with open(f"Assignment_2/transcripts/{i}", 'w') as f:
-                json.dump(transcript[i], f)
-    
-            # q = Path("Assignment_2, ")
-            # with open
-    
-
-    
-
-    
-
-    
+    pass # remove this line
 
 def prompt(choices, valid_values):
     choice = input(">> ")
-    print(choice)
-   
+
     if choice == "q":
         sys.exit()
 
-    elif choice not in valid_values:
+    if choice not in valid_values:
         print("Invalid choice\n")
         prompt(choices, valid_values)
     else:
-        print(choices[int(choice) - 1])
-        choices[int(choice) - 1]
         return choices[int(choice) - 1]
-    
-     
 
 def main():
     # Output menu and associate each menu choice with a function
@@ -247,9 +152,8 @@ def main():
         for index, choice in enumerate(choices):
             print(f" {index + 1}. {choice['name']}")
 
-        userInput = prompt(choices, ["1", "2", "3"])
-        print(userInput)
-        choice["target"]()
+        choice = prompt(choices, ["1", "2", "3"])
+        choice['target']()
 
 if __name__ == '__main__':
     main()
