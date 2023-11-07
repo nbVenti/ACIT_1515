@@ -170,14 +170,26 @@ def change_grade():
 
     print("Which grade would you like to change?:")
     y = prompt(u["grades"], ["1","2","3"])
-    
-    monkey = input("Please enter new grade:")
+    vaild = False
+    while vaild == False:
+        monkey = input("Please enter new grade:")
+        if monkey == "q":
+            sys.exit()
+
+        elif monkey.isdigit():
+            monkey = int(monkey)
+            if monkey > 0 and monkey < 100:
+                vaild = True
+            else:
+                print("Invalid input\n")
+        else:
+            print("Invalid input\n")
     # y = transcript[i]["grades"][user-input]
     ### enter validaion here
-    y['grade'] = monkey
     """    
     
     """
+    y['grade'] = monkey
     # for i in transcript:
     #     if transcript[i]["firstname"] == x:
     #         for j in range(len(transcript[i]["grades"])):
@@ -206,8 +218,6 @@ def change_grade():
 
 def prompt(choices, valid_values):
     choice = input(">> ")
-    print(choice)
-    print(valid_values)
    
     if choice == "q":
         sys.exit()
@@ -260,7 +270,6 @@ def main():
             print(f" {index + 1}. {choice['name']}")
 
         choice = prompt(choices, ["1", "2", "3"])
-        print(choice)
         choice["target"]()
 
 if __name__ == '__main__':
