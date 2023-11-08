@@ -184,6 +184,12 @@ def change_grade():
                 print("Invalid input\n")
         else:
             print("Invalid input\n")
+
+    # try monkey.isdidgit() == True and monkey > 0 and monkey < 100:
+    # monkey = int(monkey))
+    # vaild = True
+    # except ValueError:      
+    #    print("Invalid input\n")      
     # y = transcript[i]["grades"][user-input]
     ### enter validaion here
     """    
