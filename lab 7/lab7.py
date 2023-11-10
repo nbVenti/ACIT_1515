@@ -102,14 +102,13 @@ def get_player_word(computer_word,) -> str:
     while not valid_input:
         # ask the user to input a word, store it in the word variable
         word = input("Please enter a word\n>>")
-        print(word, type(word))
         
             # check if the word contains any numbers or symbols
         if word.isalpha():
             for i in word:
                 if computer_word.__contains__(i):
                     valid_input = True
-            if computer_word.__contains__(i) == False:        
+            if valid_input == False:        
                 print("Not Valid, 1\n")
         else:
             print("Not Valid, 2\n")
