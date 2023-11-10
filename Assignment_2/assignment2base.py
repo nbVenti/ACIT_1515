@@ -22,6 +22,7 @@ Notes on implementation are located below inside the functions
 from pathlib import Path
 import json
 import sys
+import os
 
 def load_transcripts():
     """
@@ -38,7 +39,16 @@ def load_transcripts():
     4. If your list from step 1 is not empty, return it, otherwise return None
 
     """
-    pass # remove this line
+    transcript = []
+    transcript_dir = Path("Assignment_2/transcripts")
+    if not transcript_dir.exists():
+        sys.exit()
+
+    for i in transcript_dir.iterdir():
+        with open(i, "r") as f:
+            transcript.append(json.load(f))
+    
+    return transcript
 
 def load_transcript():
     """
@@ -58,7 +68,20 @@ def load_transcript():
     5. From the transcript returned by prompt(), print the firstname and lastname, followed by grades for each course
 
     """
-    pass # remove this line
+    transcript = load_transcripts()
+    if transcript == None:
+        sys.exit()
+
+    else:
+        print("Please choose one of the following transcripts:")
+        for i in transcript:
+            print(str(transcript.index(i)+1)+".",i["firstname"], i["lastname"])
+        choice = prompt(transcript, ["1", "2", "3", "4"])
+        print(choice["firstname"], choice["lastname"])
+        for i in range(len(choice["grades"])):
+            print(":",choice["grades"][i])
+    
+
 
 def print_grades():
     """
@@ -80,7 +103,15 @@ def print_grades():
         etc.
 
     """
-    pass # remove this line
+    transcript = load_transcripts()
+    if transcript == None:
+        sys.exit()
+    else:
+        for i in transcript:
+            print(i["firstname"], i["lastname"])
+            for u in range(len(i["grades"])):
+                print(i["grades"][u]["course"], i["grades"][u]["grade"])
+            print()
 
 def change_grade():
     """
@@ -112,7 +143,7 @@ def change_grade():
     9. Open the file associated with the chosen transcript and dump the updated dictionary to the file, overwriting the previous data
 
     """
-    pass # remove this line
+    
 
 def prompt(choices, valid_values):
     choice = input(">> ")
@@ -122,10 +153,12 @@ def prompt(choices, valid_values):
 
     if choice not in valid_values:
         print("Invalid choice\n")
-        prompt(choices, valid_values)
+        return prompt(choices, valid_values)
     else:
-        return choices[int(choice) - 1]
-
+        if type(choice) == str:
+            choice = int(choice)
+            return choices[choice - 1]
+        return choices[(choice) - 1]
 def main():
     # Output menu and associate each menu choice with a function
     choices = [

@@ -43,11 +43,19 @@ def load_transcripts():
     transcripts = {}
     if not (Path("Assignment_2/transcripts").exists()):
         sys.exit()
+    else:
+        for i in os.listdir("Assignment_2/transcripts"):
+            if i.endswith(".json"):
+                with open(f"Assignment_2/transcripts/{i}", 'r') as f:
+                    transcripts[i] = json.load(f)
 
-    for i in os.listdir("Assignment_2/transcripts"):
-        if i.endswith(".json"):
-            with open(f"Assignment_2/transcripts/{i}", 'r') as f:
-                transcripts[i] = json.load(f) 
+
+    """
+    for i in transcripts_dir.iterdir():
+            with open(i, "r") as f:
+                transcripts[] = (json.load(f))
+    """
+
               
     
     if transcripts != None:
@@ -76,16 +84,21 @@ def load_transcript():
     if transcript == None:
         sys.exit()
     print("Please choose one of the following transcripts:")
+    index = 1
     for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
+        print(str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+        index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
 
     x = prompt(Names, ["1", "2", "3", "4"])
     
+    
     for i in transcript:
         if transcript[i]["firstname"] == x:
-            return (transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
+            print(transcript[i]["firstname"], transcript[i]["lastname"])
+            for u in range(len(transcript[i]["grades"])):
+                print(transcript[i]["grades"][u])
+            print()      
 
     
 
@@ -115,10 +128,10 @@ def print_grades():
     if grades == None:
         sys.exit()
     for i in grades:
-        print(grades[i]["firstname"],grades[i]["lastname"])
-        for u in range(3):
-            print(grades[i]["grades"][u]['course'], grades[i]["grades"][u]['grade'])
-        print()    
+        print(grades[i]["firstname"],grades[i]["lastname"]+":")
+        for u in range(len(grades[i]["grades"])):
+            print(grades[i]["grades"][u]['course']+":",grades[i]["grades"][u]['grade'])
+        print()
     
 
 def change_grade():
@@ -155,9 +168,10 @@ def change_grade():
     if transcript == None:
         sys.exit()
     print("Whos transcript would you like to change?:")
-    for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
+    index = 1
+    for i in (transcript):
+        print(str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+        index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
 
     x = prompt(Names, ["1", "2", "3", "4"])
@@ -165,14 +179,19 @@ def change_grade():
 
     for i in transcript:
         if transcript[i]["firstname"] == x:
-            print(transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
+            print(transcript[i]["firstname"], transcript[i]["lastname"])
+            index2 = 1
+            for p in range(len(transcript[i]["grades"])):
+                print(str(index2)+":",str(transcript[i]["grades"][p]["course"])+":",transcript[i]["grades"][p]["grade"])
+                index2 += 1
             u = transcript[i]
 
     print("Which grade would you like to change?:")
     y = prompt(u["grades"], ["1","2","3"])
+
     vaild = False
     while vaild == False:
-        monkey = input("Please enter new grade:")
+        monkey = input(f"Please enter new grade for the course {y['course']}\n>>")
         if monkey == "q":
             sys.exit()
 
@@ -190,7 +209,7 @@ def change_grade():
     # vaild = True
     # except ValueError:      
     #    print("Invalid input\n")      
-    # y = transcript[i]["grades"][user-input]
+    # y = transcript[i]
     ### enter validaion here
     """    
     
@@ -230,7 +249,7 @@ def prompt(choices, valid_values):
 
     elif choice not in valid_values:
         print("Invalid choice\n")
-        return prompt(choices, valid_values)
+        return prompt(((((((((((((((((((((((choices, valid_values)))))))))))))))))))))))
 
     else:
         if type(choice) == str:
