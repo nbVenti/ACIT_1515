@@ -83,21 +83,33 @@ def load_transcript():
     transcript = load_transcripts()
     if transcript == None:
         sys.exit()
+<<<<<<< HEAD
     print("\nPlease choose one of the following transcripts:")
     index = 1
     for i in ((transcript)):
         print(" "+str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+=======
+    print("Please choose one of the following transcripts:")
+    index = 1
+    for i in ((transcript)):
+        print(str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+>>>>>>> 23528f225491cafeb7daa6f302d5b73a9f712674
         index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
 
     x = prompt(Names, ["1", "2", "3", "4"])
     print()
     
+    
     for i in transcript:
         if transcript[i]["firstname"] == x:
             print(transcript[i]["firstname"], transcript[i]["lastname"])
             for u in range(len(transcript[i]["grades"])):
+<<<<<<< HEAD
                 print(" "+str(u+1)+".",transcript[i]["grades"][u]["course"],":",transcript[i]["grades"][u]["grade"])
+=======
+                print(transcript[i]["grades"][u])
+>>>>>>> 23528f225491cafeb7daa6f302d5b73a9f712674
             print()      
 
     
@@ -131,7 +143,11 @@ def print_grades():
     for i in grades:
         print(grades[i]["firstname"],grades[i]["lastname"]+":")
         for u in range(len(grades[i]["grades"])):
+<<<<<<< HEAD
             print(" "+str(u+1)+".",grades[i]["grades"][u]['course']+":",grades[i]["grades"][u]['grade'])
+=======
+            print(grades[i]["grades"][u]['course']+":",grades[i]["grades"][u]['grade'])
+>>>>>>> 23528f225491cafeb7daa6f302d5b73a9f712674
         print()
     
 
@@ -168,11 +184,13 @@ def change_grade():
     transcript = load_transcripts()
     if transcript == None:
         sys.exit()
+
     print("\nWhos transcript would you like to change?:")
     index = 1
     
     for i in (transcript):
         print(" "+str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+
         index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
     
@@ -183,18 +201,23 @@ def change_grade():
     for i in transcript:
         if transcript[i]["firstname"] == x:
             print(transcript[i]["firstname"], transcript[i]["lastname"])
+
             for p in range(len(transcript[i]["grades"])):
                 print(" "+str(p+1)+":",str(transcript[i]["grades"][p]["course"])+":",transcript[i]["grades"][p]["grade"])
+
             u = transcript[i]
     print()
     print("Which grade would you like to change?:")
     y = prompt(u["grades"], ["1","2","3"])
+
 
     print(f"\nCourse:{y['course']} Grade:{y['grade']}")
 
     vaild = False
     while vaild == False:
         monkey = input(f"Please enter new grade for the course {y['course']}\n\n>>")
+
+
         if monkey == "q":
             sys.exit()
 
