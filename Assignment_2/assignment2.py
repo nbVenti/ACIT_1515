@@ -43,11 +43,19 @@ def load_transcripts():
     transcripts = {}
     if not (Path("Assignment_2/transcripts").exists()):
         sys.exit()
+    else:
+        for i in os.listdir("Assignment_2/transcripts"):
+            if i.endswith(".json"):
+                with open(f"Assignment_2/transcripts/{i}", 'r') as f:
+                    transcripts[i] = json.load(f)
 
-    for i in os.listdir("Assignment_2/transcripts"):
-        if i.endswith(".json"):
-            with open(f"Assignment_2/transcripts/{i}", 'r') as f:
-                transcripts[i] = json.load(f) 
+
+    """
+    for i in transcripts_dir.iterdir():
+            with open(i, "r") as f:
+                transcripts[] = (json.load(f))
+    """
+
               
     
     if transcripts != None:
@@ -75,17 +83,22 @@ def load_transcript():
     transcript = load_transcripts()
     if transcript == None:
         sys.exit()
-    print("Please choose one of the following transcripts:")
+    print("\nPlease choose one of the following transcripts:")
+    index = 1
     for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
+        print(" "+str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+        index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
 
     x = prompt(Names, ["1", "2", "3", "4"])
+    print()
     
     for i in transcript:
         if transcript[i]["firstname"] == x:
-            return (transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
+            print(transcript[i]["firstname"], transcript[i]["lastname"])
+            for u in range(len(transcript[i]["grades"])):
+                print(" "+str(u+1)+".",transcript[i]["grades"][u]["course"],":",transcript[i]["grades"][u]["grade"])
+            print()      
 
     
 
@@ -114,11 +127,12 @@ def print_grades():
     grades = load_transcripts()
     if grades == None:
         sys.exit()
+    print()
     for i in grades:
-        print(grades[i]["firstname"],grades[i]["lastname"])
-        for u in range(3):
-            print(grades[i]["grades"][u]['course'], grades[i]["grades"][u]['grade'])
-        print()    
+        print(grades[i]["firstname"],grades[i]["lastname"]+":")
+        for u in range(len(grades[i]["grades"])):
+            print(" "+str(u+1)+".",grades[i]["grades"][u]['course']+":",grades[i]["grades"][u]['grade'])
+        print()
     
 
 def change_grade():
@@ -154,30 +168,56 @@ def change_grade():
     transcript = load_transcripts()
     if transcript == None:
         sys.exit()
-    print("Whos transcript would you like to change?:")
-    for i in ((transcript)):
-        print(i, transcript[i]["firstname"], transcript[i]["lastname"])
-
+    print("\nWhos transcript would you like to change?:")
+    index = 1
+    
+    for i in (transcript):
+        print(" "+str(index)+":",transcript[i]["firstname"], transcript[i]["lastname"])
+        index += 1
     Names = ["Ayesha", "Chris","Jeremy", "Tim"]
-
+    
     x = prompt(Names, ["1", "2", "3", "4"])
+    print()
     u = 0
 
     for i in transcript:
         if transcript[i]["firstname"] == x:
-            print(transcript[i]["firstname"], transcript[i]["lastname"], transcript[i]["grades"])
+            print(transcript[i]["firstname"], transcript[i]["lastname"])
+            for p in range(len(transcript[i]["grades"])):
+                print(" "+str(p+1)+":",str(transcript[i]["grades"][p]["course"])+":",transcript[i]["grades"][p]["grade"])
             u = transcript[i]
-
+    print()
     print("Which grade would you like to change?:")
     y = prompt(u["grades"], ["1","2","3"])
-    
-    monkey = input("Please enter new grade:")
-    # y = transcript[i]["grades"][user-input]
+
+    print(f"\nCourse:{y['course']} Grade:{y['grade']}")
+
+    vaild = False
+    while vaild == False:
+        monkey = input(f"Please enter new grade for the course {y['course']}\n\n>>")
+        if monkey == "q":
+            sys.exit()
+
+        elif monkey.isdigit():
+            monkey = int(monkey)
+            if monkey > 0 and monkey < 100:
+                vaild = True
+            else:
+                print("Invalid input\n")
+        else:
+            print("Invalid input\n")
+
+    # try monkey.isdidgit() == True and monkey > 0 and monkey < 100:
+    # monkey = int(monkey))
+    # vaild = True
+    # except ValueError:      
+    #    print("Invalid input\n")      
+    # y = transcript[i]
     ### enter validaion here
-    y['grade'] = monkey
     """    
     
     """
+    y['grade'] = monkey
     # for i in transcript:
     #     if transcript[i]["firstname"] == x:
     #         for j in range(len(transcript[i]["grades"])):
@@ -205,19 +245,31 @@ def change_grade():
     
 
 def prompt(choices, valid_values):
+    print()
     choice = input(">> ")
-    print(choice)
    
     if choice == "q":
         sys.exit()
 
     elif choice not in valid_values:
         print("Invalid choice\n")
-        prompt(choices, valid_values)
+        return prompt(((((((((((((((((((((((choices, valid_values)))))))))))))))))))))))
+
     else:
-        print(choices[int(choice) - 1])
-        choices[int(choice) - 1]
-        return choices[int(choice) - 1]
+        if type(choice) == str:
+            choice = int(choice)
+            return choices[choice - 1]
+        return choices[(choice) - 1]
+
+    try:
+        choice = int(choice, 10)
+        return choices[choice - 1]['target']
+    except ValueError:
+        print(choice)
+        print("Invalid choice\n")
+        return prompt(choices, valid_values)
+    print(choices[(int(choice)) - 1],"Print return statment, past if statement")
+    return choices[(int(choice)) - 1]
     
      
 
@@ -247,8 +299,7 @@ def main():
         for index, choice in enumerate(choices):
             print(f" {index + 1}. {choice['name']}")
 
-        userInput = prompt(choices, ["1", "2", "3"])
-        print(userInput)
+        choice = prompt(choices, ["1", "2", "3"])
         choice["target"]()
 
 if __name__ == '__main__':
