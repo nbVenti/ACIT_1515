@@ -11,7 +11,7 @@ try:
 except ValueError:
     print("Enter Numbers")
 except ZeroDivisionError:
-    print("make second number not zero")
+    print("Make second number not zero")
 else:
     print((x+y),
     (x-y),
