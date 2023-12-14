@@ -1,0 +1,49 @@
+[
+    {
+        "word": "fiddly",
+        "phonetic": "/\u02c8f\u026adli/",
+        "phonetics": [
+            {
+                "text": "/\u02c8f\u026adli/",
+                "audio": ""
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "adjective",
+                "definitions": [
+                    {
+                        "definition": "Requiring dexterity to operate.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "The buttons on the tiny mobile phone were too fiddly."
+                    },
+                    {
+                        "definition": "(by extension) Having many small bits or embellishments.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Of or relating to fiddling or fidgeting.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Pertaining to occasional under-the-table work by people who receive unemployment benefits",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/fiddly"
+        ]
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "word": "beatnik",
+        "phonetic": "/\u02c8bi\u02d0tn\u026ak/",
+        "phonetics": [
+            {
+                "text": "/\u02c8bi\u02d0tn\u026ak/",
+                "audio": ""
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A person who dresses in a manner that is not socially acceptable and therewith is supposed to reject conventional norms of thought and behavior; nonconformist in dress and behavior",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "A person associated with the Beat Generation of the 1950s and 1960s or its style.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/beatnik"
+        ]
+    }
+]

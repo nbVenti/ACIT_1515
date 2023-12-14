@@ -1,0 +1,47 @@
+[
+    {
+        "word": "tailwind",
+        "phonetic": "/\u02c8te\u026alw\u026and/",
+        "phonetics": [
+            {
+                "text": "/\u02c8te\u026alw\u026and/",
+                "audio": ""
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A wind that blows in the same direction as the course of an aircraft or ship",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": [
+                    "headwind"
+                ]
+            },
+            {
+                "partOfSpeech": "verb",
+                "definitions": [
+                    {
+                        "definition": "Of wind, to blow on a windmill or wind turbine in such a way that wind pressure is exerted on the wrong side of the sail or turbine assembly.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/tailwind"
+        ]
+    }
+]

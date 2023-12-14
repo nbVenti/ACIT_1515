@@ -1,0 +1,97 @@
+[
+    {
+        "word": "geezer",
+        "phonetics": [
+            {
+                "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/geezer-au.mp3",
+                "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=79268284",
+                "license": {
+                    "name": "BY-SA 4.0",
+                    "url": "https://creativecommons.org/licenses/by-sa/4.0"
+                }
+            },
+            {
+                "text": "/\u02c8\u0261i\u02d0z\u0259/",
+                "audio": ""
+            },
+            {
+                "text": "/\u02c8\u0261iz\u025a/",
+                "audio": ""
+            }
+        ],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "(dated in US) A male person.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "(chiefly Cockney) Someone affable but morally dubious; a wide boy.",
+                        "synonyms": [
+                            "spiv",
+                            "wide boy"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Term of address for a male.",
+                        "synonyms": [
+                            "mate"
+                        ],
+                        "antonyms": [],
+                        "example": "Hi, geezer, you alright?"
+                    },
+                    {
+                        "definition": "(sometimes mildly) An old person, usually a male, typically a cranky old man.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Wife; old woman.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "mate",
+                    "spiv",
+                    "wide boy"
+                ],
+                "antonyms": []
+            },
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A boiling natural spring which throws forth at frequent intervals jets of water, mud etc., driven up by the expansive power of steam.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "An instantaneous, and often dangerous, hot water heater.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "A domestic water boiler.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/geezer",
+            "https://en.wiktionary.org/wiki/geyser"
+        ]
+    }
+]

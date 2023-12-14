@@ -1,0 +1,29 @@
+[
+    {
+        "word": "unridable",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "adjective",
+                "definitions": [
+                    {
+                        "definition": "Not rideable.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "That horse is unrideable."
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/unridable",
+            "https://en.wiktionary.org/wiki/unrideable"
+        ]
+    }
+]

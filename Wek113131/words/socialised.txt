@@ -1,0 +1,39 @@
+[
+    {
+        "word": "socialised",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "verb",
+                "definitions": [
+                    {
+                        "definition": "To interact with others",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "To instruct somebody, usually subconsciously, in the etiquette of a society",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "To take something into collective or governmental ownership",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/socialise",
+            "https://en.wiktionary.org/wiki/socialised",
+            "https://en.wiktionary.org/wiki/socialize"
+        ]
+    }
+]

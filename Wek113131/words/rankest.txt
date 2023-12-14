@@ -1,0 +1,91 @@
+[
+    {
+        "word": "rankest",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "adjective",
+                "definitions": [
+                    {
+                        "definition": "Strong of its kind or in character; unmitigated; virulent; thorough; utter (used of negative things).",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "rank nonsense"
+                    },
+                    {
+                        "definition": "Strong in growth; growing with vigour or rapidity, hence, coarse or gross.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "rank grass"
+                    },
+                    {
+                        "definition": "Suffering from overgrowth or hypertrophy; plethoric.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Causing strong growth; producing luxuriantly; rich and fertile.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "rank land"
+                    },
+                    {
+                        "definition": "Strong to the senses; offensive; noisome.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Having a very strong and bad taste or odor.",
+                        "synonyms": [
+                            "pong",
+                            "smelly",
+                            "stinky"
+                        ],
+                        "antonyms": [],
+                        "example": "Your gym clothes are rank, bro \u2013 when'd you last wash 'em?"
+                    },
+                    {
+                        "definition": "Complete, used as an intensifier (usually negative, referring to incompetence).",
+                        "synonyms": [
+                            "complete",
+                            "utter"
+                        ],
+                        "antonyms": [],
+                        "example": "I am a rank amateur as a wordsmith."
+                    },
+                    {
+                        "definition": "Gross, disgusting.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Strong; powerful; capable of acting or being used with great effect; energetic; vigorous; headstrong.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "Inflamed with venereal appetite; ruttish.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "complete",
+                    "utter",
+                    "pong",
+                    "smelly",
+                    "stinky"
+                ],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/rank",
+            "https://en.wiktionary.org/wiki/rankest"
+        ]
+    }
+]

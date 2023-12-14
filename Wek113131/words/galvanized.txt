@@ -1,0 +1,82 @@
+[
+    {
+        "word": "galvanized",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "adjective",
+                "definitions": [
+                    {
+                        "definition": "Of metal, coated with zinc as a form of protection against rust.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "galvanised pipes"
+                    },
+                    {
+                        "definition": "Having been subjected to galvanism; electrified.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            },
+            {
+                "partOfSpeech": "verb",
+                "definitions": [
+                    {
+                        "definition": "To coat with a thin layer of metal by electrochemical means.",
+                        "synonyms": [
+                            "electroplate",
+                            "zinc"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "To coat with rust-resistant zinc.",
+                        "synonyms": [],
+                        "antonyms": [],
+                        "example": "to galvanize steel"
+                    },
+                    {
+                        "definition": "To shock or stimulate into sudden activity, as if by electric shock.",
+                        "synonyms": [
+                            "animate",
+                            "startle",
+                            "urge"
+                        ],
+                        "antonyms": [],
+                        "example": "Republicans are hoping a proposed gas-tax repeal will galvanize their voters."
+                    },
+                    {
+                        "definition": "To electrify.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "To switch sides between Union and Confederate in the American Civil War.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "animate",
+                    "startle",
+                    "urge",
+                    "electroplate",
+                    "zinc"
+                ],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/galvanised",
+            "https://en.wiktionary.org/wiki/galvanize",
+            "https://en.wiktionary.org/wiki/galvanized"
+        ]
+    }
+]

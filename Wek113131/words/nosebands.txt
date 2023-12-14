@@ -1,0 +1,31 @@
+[
+    {
+        "word": "nosebands",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "The part of a bridle or halter that goes over the nose of an animal, particularly a horse.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "bosal",
+                    "musrole"
+                ],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/noseband",
+            "https://en.wiktionary.org/wiki/nosebands"
+        ]
+    }
+]

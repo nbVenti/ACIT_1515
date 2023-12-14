@@ -1,0 +1,77 @@
+[
+    {
+        "word": "avo",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A subdivision of currency, equal to one hundredth of a Macanese pataca.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/avo"
+        ]
+    },
+    {
+        "word": "avo",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "The large, usually yellowish-green or black, pulpy fruit of the avocado tree.",
+                        "synonyms": [
+                            "abacate",
+                            "alligator pear",
+                            "avocado pear",
+                            "butter pear"
+                        ],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "The avocado tree, Persea americana, of the laurel family.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "A dark chartreuse colour, like the colour of the skin of an avocado.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "abacate",
+                    "alligator pear",
+                    "avocado pear",
+                    "butter pear",
+                    "alligator pear",
+                    "avocado pear",
+                    "butter fruit",
+                    "butter pear"
+                ],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/avo",
+            "https://en.wiktionary.org/wiki/avocado"
+        ]
+    }
+]
