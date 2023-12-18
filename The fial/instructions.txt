@@ -1,0 +1,27 @@
+For the final exam you will be creating a script that fetches a random word and allows the user to guess either a letter in the word, or the entire word (thus ending the script), until a maximum number of guesses (5) is reached.
+
+
+The random word will only be shown to the user as a number of underscores, e.g.:
+
+
+_ _ _ _ _ _
+
+
+As letters are correctly guessed, the "hidden" characters must be replaced with letters, e.g.:
+
+
+p _ _ _ _ _
+
+
+Until either the player runs out of tries, or is able to guess the word, e.g.:
+
+
+p _ t h o n
+
+
+The script must print a menu that allows the user to perform the following actions:
+    - Viewing the current unsolved word
+    - Viewing all previously guessed letters
+    - Checking the number of remaining guesses
+    - Guessing a letter
+    - Guessing the entire word

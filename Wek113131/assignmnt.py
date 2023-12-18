@@ -24,22 +24,25 @@ if response.status_code == 200:
 
 print(word,data) 
 
-# filenames = []
+filenames = []
 
-# for i in path.iterdir():
-#     filenames.append(i.stem)
+for i in path.iterdir():
+    filenames.append(i.stem)
 
-# # print(filenames)
+# print(filenames)
 
-# for index, filename in enumerate(filenames):
-#     print(f"{index + 1}. {filename}")
+for index, filename in enumerate(filenames):
+    print(f"{index + 1}. {filename}")
 
-# choice = int(input("\n>>"))
+choice = int(input("\n>>"))
 
-# with open(f"./Wek113131/words/{filenames[choice - 1]}.txt") as file:
-#     data = json.load(file)
-#     print(data[0]["word"])
-#     print(data[0]["meanings"][0]["definitions"][0]["definition"])
+with open(f"./Wek113131/words/{filenames[choice - 1]}.txt") as file:
+    print(file.read())
+    data = json(file)
+    print(data)
+    json.loads()
+    # print(data[0]["word"])
+    # print(data[0]["meanings"][0]["definitions"][0]["definition"])
 
 
 

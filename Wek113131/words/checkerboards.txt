@@ -1,0 +1,35 @@
+[
+    {
+        "word": "checkerboards",
+        "phonetics": [],
+        "meanings": [
+            {
+                "partOfSpeech": "noun",
+                "definitions": [
+                    {
+                        "definition": "A pattern of squares of alternating colours.",
+                        "synonyms": [],
+                        "antonyms": []
+                    },
+                    {
+                        "definition": "A board, usually square, covered with such a pattern; especially such a board with 8\u00d78 squares, used to play chess and draughts/checkers.",
+                        "synonyms": [],
+                        "antonyms": []
+                    }
+                ],
+                "synonyms": [
+                    "draughtboard"
+                ],
+                "antonyms": []
+            }
+        ],
+        "license": {
+            "name": "CC BY-SA 3.0",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0"
+        },
+        "sourceUrls": [
+            "https://en.wiktionary.org/wiki/checkerboard",
+            "https://en.wiktionary.org/wiki/checkerboards"
+        ]
+    }
+]
